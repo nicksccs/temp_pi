@@ -23,6 +23,7 @@ sudo ufw allow 8000
 
 # Configure unattended-upgrades
 sudo dpkg-reconfigure --priority=low unattended-upgrades
+sudo mkdir /opt/sensor-metrics
 
 # Create the Prometheus sensor script
 cat <<EOL > /opt/sensor-metrics/sensor.py
@@ -112,7 +113,6 @@ WantedBy=multi-user.target
 EOL
 
 # Start and enable the service
-sudo mkdir /opt/sensor-metrics
 sudo systemctl enable sensor.service
 sudo systemctl start sensor.service
 
