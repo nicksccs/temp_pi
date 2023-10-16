@@ -11,7 +11,7 @@ sudo apt install -y python3 python3-pip python3-systemd ufw unattended-upgrades 
 sudo pip3 install --upgrade setuptools
 
 # Install Python sensor libraries
-sudo pip3 install adafruit-circuitpython-shtc3 adafruit-circuitpython-dht Adafruit_DHT
+sudo pip3 install adafruit-circuitpython-shtc3 adafruit-circuitpython-dht Adafruit_DHT --break-system-packages
 
 # Configure UFW
 sudo ufw default allow outgoing
