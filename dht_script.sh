@@ -122,5 +122,9 @@ sudo raspi-config nonint do_i2c 0
 # Get the MAC address
 ifconfig | grep ether
 
-# Finish installation
+# Get the IP address
+ip_address=$(hostname -I | cut -d ' ' -f 1)
+
+# Inform the user
 echo "Installation completed."
+echo "You can access Prometheus metrics at: http://$ip_address:8000"
