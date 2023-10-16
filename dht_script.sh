@@ -44,7 +44,7 @@ log.setLevel(logging.INFO)
 # Initialize the DHT11 sensor
 # Read data from GPIO4 pin on the Raspberry Pi
 SENSOR = Adafruit_DHT.DHT22
-SENSOR_PIN = 17
+SENSOR_PIN = 4
 
 # The time in seconds between sensor reads
 READ_INTERVAL = 60
