@@ -5,13 +5,13 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # Install necessary packages
-sudo apt install -y python3 python3-pip python3-systemd ufw unattended-upgrades libgpiod2 squashfs-tools prometheus-client
+sudo apt install -y python3 python3-pip python3-systemd ufw unattended-upgrades libgpiod2 squashfs-tools 
 
 # Upgrade setuptools
 sudo pip3 install --upgrade setuptools
 
 # Install Python sensor libraries
-sudo pip3 install adafruit-circuitpython-shtc3 adafruit-circuitpython-dht Adafruit_DHT
+sudo pip3 install adafruit-circuitpython-shtc3 adafruit-circuitpython-dht Adafruit_DHT prometheus-client --break-system-packages
 
 # Configure UFW
 sudo ufw default allow outgoing
