@@ -2,7 +2,10 @@
 for raspberry pi's and temp sensors
 
 These two scripts work for the DHT22, 11, and SHCT3 modules.
-Double check the GPIO Pin number you are using in the script 
+Double check the GPIO Pin number and edit the DHT model you are using in the script at
+````
+/opt/sensor-metrics/sensor.py
+````
 
 Steps:
 where <temp_script> is either the DHT or the SHCT3 script
